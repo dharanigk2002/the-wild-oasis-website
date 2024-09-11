@@ -1,7 +1,7 @@
 import { updateBooking } from "../../../../_lib/actions";
 import { getBooking, getCabin } from "../../../../_lib/data-service";
 
-import SubmitButton from "@/app/_components/SubmitButton";
+import SubmitButton from "../../../../_components/SubmitButton";
 
 export const metadata = {
   title: "Edit cabin",
