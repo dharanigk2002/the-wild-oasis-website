@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.900");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* For data picker */
+.rdp-root {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-accent-background-color: theme("colors.accent.600") !important;
+  --rdp-months-gap: 2rem !important;
+  --rdp-disabled-opacity: 0.5 !important;
+  align-self: flex-start !important;
+  margin: 0 !important;
+}
+
+.rdp-nav {
+  display: none !important;
+}
+
+.rdp-months {
+  flex-wrap: nowrap !important;
+}
+
+.rdp-month_caption {
+  justify-content: center !important;
+  margin-bottom: 10px !important;
+}
+
+option:disabled {
+  color: #ccc !important;
+}
+
+option:not(:disabled) {
+  color: #413b3b !important;
+}
